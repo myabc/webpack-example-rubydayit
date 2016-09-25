@@ -1,0 +1,39 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "deploy": "NODE_ENV=production webpack -p"
+  },
+  "name": "rubyday-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "babel-runtime": "^5.8.20",
+    "classnames": "^2.1.1",
+    "react": "^0.13.3",
+    "react-hot-loader": "^1.2.7",
+    "react-router": "~0.13.3",
+    "webpack-dev-server": "^1.9.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.19",
+    "babel-core": "^5.8.19",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.14.5",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^0.8.1",
+    "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^1.6.1",
+    "i18n-webpack-plugin": "^0.2.7",
+    "jshint-stylish": "0.4.0",
+    "jsx-loader": "^0.13.2",
+    "radium": "^0.13.7",
+    "raw-loader": "^0.5.1",
+    "react": "^0.13.3",
+    "stats-webpack-plugin": "^0.2.1",
+    "style-loader": "^0.12.3",
+    "stylus-loader": "^1.2.0",
+    "webpack": "^1.9.8"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
