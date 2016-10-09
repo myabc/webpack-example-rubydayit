@@ -58,7 +58,7 @@ var config = Object.keys(languages).map(function(language) {
         loaders: [
           { test: /\.jsx?$/,
             exclude: /(node_modules)/,
-            loaders: ['react-hot', 'babel?optional[]=runtime&stage=0'],
+            loaders: ['react-hot', 'babel'],
             include: path.join(__dirname, 'src/app')
           },
           { test: /\.(jpe?g|png|gif|svg)$/i, loader: 'file-loader?name=images/[name].[ext]' }
