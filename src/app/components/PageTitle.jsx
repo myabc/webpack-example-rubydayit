@@ -1,15 +1,9 @@
-var Radium = require('radium');
-var Style = Radium.Style;
-var React = require('react');
+import React, { Component, PropTypes } from 'react';
+import Radium, { Style } from 'radium';
 
-var PageTitle = React.createClass({
-  propTypes: {
-    id:              React.PropTypes.string,
-    highlightColor:  React.PropTypes.string.isRequired
-  },
-
-  render: function() {
-    var customStyle = {
+export default class PageTitle extends Component {
+  render() {
+    const customStyle = {
       "backgroundColor": this.props.highlightColor
     };
 
@@ -20,6 +14,9 @@ var PageTitle = React.createClass({
       </header>
     );
   }
-});
+}
 
-module.exports = PageTitle;
+PageTitle.propTypes = {
+  id:              PropTypes.string,
+  highlightColor:  PropTypes.string.isRequired
+}

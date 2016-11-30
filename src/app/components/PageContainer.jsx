@@ -1,20 +1,19 @@
-var React = require('react');
-var PageTitle = require('./PageTitle');
+import React, { Component, PropTypes } from 'react';
 
-var PageContainer = React.createClass({
-  render: function(){
+import PageTitle from './PageTitle';
+
+export default class PageContainer extends Component {
+  render(){
     return (
       <div style={styles.container}>
         <PageTitle highlightColor="#ffc" />
       </div>
     );
   }
-});
+}
 
-var styles = {
+const styles = {
   container: {
     width: '80%'
   }
 };
-
-module.exports = PageContainer;

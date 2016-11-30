@@ -1,18 +1,10 @@
-var React = require('react');
+import React, { Component, PropTypes } from 'react';
+import Radium, { Style } from 'radium';
 
-var Radium = require('radium');
-var Style = Radium.Style;
+import PageContainer from './PageContainer';
 
-var PageContainer = require('./PageContainer');
-
-var AppRoot = React.createClass({
-  componentWillMount: function(){
-  },
-
-  componentWillUnmount: function(){
-  },
-
-  render: function() {
+export default class AppRoot extends Component {
+  render() {
     return (
         <div>
           <Style rules={{
@@ -25,6 +17,4 @@ var AppRoot = React.createClass({
         </div>
     );
   }
-});
-
-module.exports = AppRoot;
+}
