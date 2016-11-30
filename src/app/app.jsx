@@ -1,43 +1,22 @@
-'use strict';
-var Radium = require('radium');
-var Style = Radium.Style;
-var React = require('react'),
-  ExampleApp;
+import { AppContainer } from 'react-hot-loader';
+import React from 'react';
+import { render } from 'react-dom';
+import AppRoot from './components/AppRoot';
 
-var PageContainer = require('./components/PageContainer');
-
-ExampleApp = React.createClass({
-  componentWillMount: function(){
-  },
-
-  componentWillUnmount: function(){
-  },
-
-  render: function() {
-    return (
-        <div>
-          <Style rules={{
-            body: {
-              backgroundColor : '#eee',
-              fontFamily:       'sans-serif'
-            }
-          }} />
-          <PageContainer></PageContainer>
-        </div>
-    );
-  }
-});
-
-var rootInstance = React.render(
-    <ExampleApp />,
-    document.getElementById('app')
-);
+render(
+  <AppContainer>
+    <AppRoot />
+  </AppContainer>,
+  document.getElementById('app')
+)
 
 if (module.hot) {
-  require('react-hot-loader/Injection').RootInstanceProvider.injectProvider({
-    getRootInstances: function () {
-      // Help React Hot Loader figure out the root component instances on the page:
-      return [rootInstance];
-    }
-  });
+  module.hot.accept('./components/AppRoot', () => {
+    render(
+      <AppContainer>
+        <AppRoot />
+      </AppContainer>,
+      document.getElementById('app')
+    );
+  })
 }
